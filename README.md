@@ -75,7 +75,7 @@ The saved historical execution plan shows the result.
 
 ### Original Execution Plan
 
-![Anonymized execution plan](images/execution_plan_anonymized.svg)
+![Anonymized execution plan](execution_plan_anonymized.png)
 
 The plan has been reconstructed and anonymized while preserving its operator topology, estimates, actual row counts, and other performance characteristics.
 
