@@ -316,10 +316,10 @@ The underlying problem does not:
 
 | Asset | Purpose |
 |---|---|
-| [`sql/staged_decomposition.sql`](sql/staged_decomposition.sql) | Anonymized example of early filtering, materialization and pre-aggregation |
-| [`sql/indexed_assembly.sql`](sql/indexed_assembly.sql) | Anonymized example of indexed intermediate relations and progressive assembly |
-| [`images/execution_plan_anonymized.svg`](images/execution_plan_anonymized.svg) | Reconstructed historical execution plan with production identifiers removed |
-| [`images/execution_plan_anonymized.png`](images/execution_plan_anonymized.png) | Raster version of the reconstructed plan |
+| [`sql/staged_decomposition.sql`](staged_decomposition.sql) | Anonymized example of early filtering, materialization and pre-aggregation |
+| [`sql/indexed_assembly.sql`](indexed_assembly.sql) | Anonymized example of indexed intermediate relations and progressive assembly |
+| [`images/execution_plan_anonymized.svg`](execution_plan_anonymized.svg) | Reconstructed historical execution plan with production identifiers removed |
+| [`images/execution_plan_anonymized.png`](execution_plan_anonymized.png) | Raster version of the reconstructed plan |
 
 ---
 
