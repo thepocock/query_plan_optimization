@@ -97,23 +97,13 @@ The plan has been reconstructed and anonymized while preserving its operator top
 
 Rather than attempting to force the optimizer into producing a better plan for the entire expression, the workload was divided into smaller relational problems.
 
-```mermaid
 flowchart LR
-    SOURCE["Large Source Tables"]
-    FILTER["Constrain Relevant Data"]
-    MATERIALIZE["Materialize Intermediate Relations"]
-    AGG["Pre-Aggregate Measures"]
-    TUNE["Tune Individual Stages"]
-    ASSEMBLE["Controlled Final Assembly"]
-    RESULT["Analytical Dataset"]
-
-    SOURCE --> FILTER
-    FILTER --> MATERIALIZE
-    MATERIALIZE --> AGG
-    AGG --> TUNE
-    TUNE --> ASSEMBLE
-    ASSEMBLE --> RESULT
-```
+    SOURCE[Large Source Tables] --> FILTER[Constrain Relevant Data]
+    FILTER --> MATERIALIZE[Materialize Intermediate Relations]
+    MATERIALIZE --> AGG[Pre-Aggregate Measures]
+    AGG --> TUNE[Tune Individual Stages]
+    TUNE --> ASSEMBLE[Controlled Final Assembly]
+    ASSEMBLE --> RESULT[Analytical Dataset]
 
 The key techniques were:
 
