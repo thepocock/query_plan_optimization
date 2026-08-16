@@ -1,5 +1,7 @@
 # query_plan_optimization
 
+Sample SQL - Circa 2016
+
 ### Analytical SQL Optimization through Materialization, Cardinality Control & Staged Execution
 
 `QUERY OPTIMIZATION` `DATA ENGINEERING` `ANALYTICAL SQL`
@@ -18,6 +20,16 @@ The resulting execution plan provides a particularly clear example:
 | **Actual final rows** | **3,038,173** |
 | **Cardinality error** | ~6,270× |
 | **Optimizer result** | Early termination — `TimeOut` |
+
+### Intermediate Cardinality Explosion
+
+The final row count understates the scale of the optimizer problem.
+
+At one intermediate hash join, SQL Server estimated approximately **2,694 rows** but actually produced **185,245,431 rows** — a cardinality error of roughly **68,800×**.
+
+Other operators accumulated more than **674 million row operations** through repeated nested-loop execution.
+
+This workload dates to **2016**, illustrating large-scale analytical SQL optimization against data flows reaching hundreds of millions of rows well before modern cloud data platforms became the default analytical environment.
 
 The solution was to stop treating the workload as one optimization problem.
 
